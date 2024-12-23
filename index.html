@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#album">Album</a></li>
+            <li><a href="#endorsements">Endorsements</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Hello Blooms, We are BINI &hearts;</h1>
+    </header>
+
+    <main>
+        <!-- Members Section -->
+        <section id="members" class="features">
+            <h2>Members</h2>
+            <div class="member-pictures">
+                <div>
+                    <img src="./aiah.jpg" alt="Aiah" onclick="openModal('Aiah', './aiah.jpg')">
+                    <p>Aiah</p>
+                </div>
+                <div>
+                    <img src="./maloi.jpg" alt="Maloi" onclick="openModal('Maloi', './maloi.jpg')">
+                    <p>Maloi</p>
+                </div>
+                <div>
+                    <img src="./stacy.jpg" alt="Stacy" onclick="openModal('Stacy', './stacy.jpg')">
+                    <p>Stacy</p>
+                </div>
+                <div>
+                    <img src="./gwen.jpg" alt="Gwen" onclick="openModal('Gwen', './gwen.jpg')">
+                    <p>Gwen</p>
+                </div>
+                <div>
+                    <img src="./colet.jpg" alt="Colet" onclick="openModal('Colet', './colet.jpg')">
+                    <p>Colet</p>
+                </div>
+                <div>
+                    <img src="./sheena.jpg" alt="Sheena" onclick="openModal('Sheena', './sheena.jpg')">
+                    <p>Sheena</p>
+                </div>
+                <div>
+                    <img src="./mikha.jpg" alt="Mikha" onclick="openModal('Mikha', './mikha.jpg')">
+                    <p>Mikha</p>
+                </div>
+                <div>
+                    <img src="./jhoanna.jpg" alt="Jhoanna" onclick="openModal('Jhoanna', './jhoanna.jpg')">
+                    <p>Jhoanna</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Album Section -->
+<section id="album" class="album">
+    <h2>ALBUM</h2>
+    <div class="album-container">
+        <div class="album-slider">
+            <!-- Album Item 1 -->
+            <div class="album-item">
+                <img src="./cherry.jpg" alt="Cherry" onclick="openAlbumModal('./cherry.mp4')">
+                <p>Cherry on top</p>
+            </div>
+            <!-- Album Item 2 -->
+            <div class="album-item">
+                <img src="./pantropiko.jpg" alt="Pantropiko" onclick="openAlbumModal('./pantropiko.mp4')">
+                <p>Pantropiko</p>
+            </div>
+            <!-- Album Item 3 -->
+            <div class="album-item">
+                <img src="./karera.jpg" alt="Karera" onclick="openAlbumModal('./karera.mp4')">
+                <p>Karera</p>
+            </div>
+            <!-- Album Item 4 -->
+            <div class="album-item">
+                <img src="./salamin.jpg" alt="Salamin" onclick="openAlbumModal('./salamin.mp4')">
+                <p>Salamin</p>
+            </div>
+            <!-- Album Item 5 -->
+            <div class="album-item">
+                <img src="./lagi.jpg" alt="Lagi" onclick="openAlbumModal('./lagi.mp4')">
+                <p>Lagi</p>
+            </div>
+
+            <!-- Duplicate Album Items for Seamless Loop -->
+            <div class="album-item">
+                <img src="./cherry.jpg" alt="Cherry" onclick="openAlbumModal('./cherry.mp4')">
+                <p>Cherry on top</p>
+            </div>
+            <div class="album-item">
+                <img src="./pantropiko.jpg" alt="Pantropiko" onclick="openAlbumModal('./pantropiko.mp4')">
+                <p>Pantropiko</p>
+            </div>
+            <div class="album-item">
+                <img src="./karera.jpg" alt="Karera" onclick="openAlbumModal('./karera.mp4')">
+                <p>Karera</p>
+            </div>
+            <div class="album-item">
+                <img src="./salamin.jpg" alt="Salamin" onclick="openAlbumModal('./salamin.mp4')">
+                <p>Salamin</p>
+            </div>
+            <div class="album-item">
+                <img src="./lagi.jpg" alt="Lagi" onclick="openAlbumModal('./lagi.mp4')">
+                <p>Lagi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Endorsements Section -->
+        <section id="endorsements" class="portfolio">
+            <h2>ENDORSEMENTS</h2>
+            <div class="albums">
+                <div>
+                    <img src="./Jollibee.jpg" alt="Jollibee" onclick="openModal('Jollibee', './Jollibee.jpg')">
+                    <p>Jollibee</p>
+                </div>
+                <div>
+                    <img src="./maybeline.jpg" alt="Maybeline" onclick="openModal('Maybeline', './maybeline.jpg')">
+                    <p>Maybeline</p>
+                </div>
+                <div>
+                    <img src="./modess.jpg" alt="Modess" onclick="openModal('Modess', './modess.jpg')">
+                    <p>Modess</p>
+                </div>
+                <div>
+                    <img src="./shopee.jpg" alt="Shopee" onclick="openModal('Shopee', './shopee.jpg')">
+                    <p>Shopee</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <h2>Contact Us</h2>
+            <p>Email: bini.official@gmail.com</p>
+            <p>Phone: +123 456 7890</p>
+        </section>
+    </main>
+
+    <!-- Modal for Album -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <video id="modal-video" controls style="display:none;">
+                <source src="" id="video-source" type="video/mp4">
+            </video>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
